@@ -1,3 +1,6 @@
 {
-    "greetingText" : "Hi my name is Leilisson!"
+	"firstName" : "Leilisson",
+	"lastName" : "Figueiredo",
+	"enabled" : true,
+	"panelHeaderText" : "Data Binding Basics"
 }

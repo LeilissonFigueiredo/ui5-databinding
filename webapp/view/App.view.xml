@@ -1,7 +1,22 @@
 <mvc:View
     xmlns="sap.m"
-    xmlns:mvc="sap.ui.core.mvc">
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:form="sap.ui.layout.form">
 
-    <Text text="{/greetingText}"/>
+    <Panel 
+        headerText="{/panelHeaderText}"
+        class="sapUiResponsiveMargin"
+        width="auto">
+
+        <form:SimpleForm  editable="true" layout="ResponsiveGridLayout">
+            <Label text="First Name"  labelFor="ipFirstName"/>
+            <Input id="ipFirsttName" value="{/firstName}" valueLiveUpdate="true" width="200px" editable="{/enabled}"/>
+            <Label text="Last Name"  labelFor="ipLasttName"/>
+            <Input id="ipLasttName" value="{/lastName}" valueLiveUpdate="true" width="200px" editable="{/enabled}"/>   
+            <Label text="Enabled" labelFor="cbEnabled"/>
+            <CheckBox id="cbEnabled" selected="{/enabled}"/>
+        </form:SimpleForm>
+
+    </Panel>
 
 </mvc:View>
