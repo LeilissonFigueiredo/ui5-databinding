@@ -10,12 +10,6 @@ sap.ui.define([
             manifest: "json"
         },
 
-        init(){
-            UiComponent.prototype.init.apply(this, arguments);
-
-            this.getModel()?.setDefaultBindingMode(BindingMode.OneWay);
-        }
-
     })
 
 })

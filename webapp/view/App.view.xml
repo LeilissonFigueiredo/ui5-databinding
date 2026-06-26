@@ -9,11 +9,11 @@
         width="auto">
 
         <form:SimpleForm  editable="true" layout="ResponsiveGridLayout">
-            <Label text="First Name"  labelFor="ipFirstName"/>
+            <Label text="{i18n>firstName}"  labelFor="ipFirstName"/>
             <Input id="ipFirsttName" value="{/firstName}" valueLiveUpdate="true" width="200px" editable="{/enabled}"/>
-            <Label text="Last Name"  labelFor="ipLasttName"/>
+            <Label text="{i18n>lastName}"  labelFor="ipLasttName"/>
             <Input id="ipLasttName" value="{/lastName}" valueLiveUpdate="true" width="200px" editable="{/enabled}"/>   
-            <Label text="Enabled" labelFor="cbEnabled"/>
+            <Label text="{i18n>enabled}" labelFor="cbEnabled"/>
             <CheckBox id="cbEnabled" selected="{/enabled}"/>
         </form:SimpleForm>
 
