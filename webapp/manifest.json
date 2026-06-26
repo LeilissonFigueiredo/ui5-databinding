@@ -23,6 +23,12 @@
 				"sap.ui.core": {}
 			}
 		},
+        "models":{
+            "": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "./model/data.json"
+            }
+        },
 		"rootView": {
 			"viewName": "ui5.databinding.view.App",
 			"type": "XML",
