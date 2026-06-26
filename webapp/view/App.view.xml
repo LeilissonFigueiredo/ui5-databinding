@@ -1,7 +1,8 @@
 <mvc:View
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns:form="sap.ui.layout.form">
+    xmlns:form="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout">
 
     <Panel 
         headerText="{i18n>panelHeaderText}"
@@ -16,7 +17,22 @@
             <Label text="{i18n>enabled}" labelFor="cbEnabled"/>
             <CheckBox id="cbEnabled" selected="{/enabled}"/>
         </form:SimpleForm>
-
+    </Panel>
+    <Panel 
+        headerText="{i18n>panel2HeaderText}"
+        class="sapUiResponsiveMargin"
+        width="auto">
+        <content>
+            <l:VerticalLayout>
+                <Label labelFor="ftAddress" text="{i18n>address}" />
+                <FormattedText
+                    class="sapUiSmallMarginBottom"
+                    htmlText="{/address/street}&lt;br>{/address/zip} {/address/city}&lt;br>{/address/country}"
+                    id="ftAddress"
+                    width="200px"
+                />
+            </l:VerticalLayout>
+        </content>
     </Panel>
 
 </mvc:View>
