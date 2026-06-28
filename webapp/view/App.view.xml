@@ -91,7 +91,8 @@
                             showMeasure: false
                         }      
                     }"
-                    numberUnit="{/currencyCode}">
+                    numberUnit="{/currencyCode}"
+                    numberState="{= ${products>UnitPrice} > ${/priceThreshold} ? 'Error' : 'Success' }">
                     <attributes>
                         <ObjectAttribute
                             text="{products>QuantityPerUnit}"/>
