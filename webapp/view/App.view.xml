@@ -78,6 +78,8 @@
                     core:require="{
                         Currency: 'sap/ui/model/type/Currency'
                     }" 
+                    press=".onSelectItem"
+                    type="Active"
                     title="{products>ProductName}"
                     number="{
                         parts:[
@@ -109,6 +111,32 @@
          
             </items>
         </List>
+    </Panel>
+    <Panel 
+        headerText='{i18n>panel4HeaderText}'
+        class='sapUiResponsiveMargin'
+        width="auto"
+        id="pnProductDetailsPanel">
+        <form:SimpleForm editable="true" layout="ResponsiveGridLayout">
+            <Label text="{i18n>productID}"  labelFor="ipProductID"/>
+            <Input id="ipProductID" value="{products>ProductID}"/>
+            
+            <Label text="{i18n>productName}"  labelFor="ipProductName"/>
+            <Input id="ipProductName" value="{products>ProductName}"/>   
+
+            <Label text="{i18n>quantityPerUnit}" labelFor="ipQuantityPerUnit"/>
+			<Input id="ipQuantityPerUnit" value="{products>QuantityPerUnit}"/>
+
+			<Label text="{i18n>unitPrice}" labelFor="ipUnitPrice"/>
+			<Input id="ipUnitPrice" value="{products>UnitPrice}"/>
+
+			<Label text="{i18n>unitsInStock}" labelFor="ipUnitInStock"/>
+			<Input id="ipUnitInStock" value="{products>UnitsInStock}"/>         
+
+            <Label text="{i18n>discontinued}" labelFor="cbEnabled"/>
+            <CheckBox id="cbDiscontinued" selected="{products>Discontinued}"/>
+        </form:SimpleForm>
+    
     </Panel>
 
 </mvc:View>
