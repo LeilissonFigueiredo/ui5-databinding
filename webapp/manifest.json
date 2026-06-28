@@ -29,6 +29,10 @@
                 "type": "sap.ui.model.json.JSONModel",
                 "uri": "./model/data.json"
             },
+			"products" :{
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "./model/Products.json"
+			},
             "i18n":{
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
