@@ -70,47 +70,18 @@
         headerText="{i18n>panel3HeaderText}"
         class="sapUiResponsiveMargin"
         width="auto">
-        <List 
+        <List
+            id="liProducts" 
             headerText="{i18n>productListTitle}"
-            items="{products>/Products}">
-            <items>
-                <ObjectListItem
-                    core:require="{
-                        Currency: 'sap/ui/model/type/Currency'
-                    }" 
-                    press=".onSelectItem"
-                    type="Active"
-                    title="{products>ProductName}"
-                    number="{
-                        parts:[
-                            'products>UnitPrice',
-                            '/currencyCode'
-                        ],
-                        type: 'Currency',
-                        formatOptions: {
-                            showMeasure: false
-                        }      
-                    }"
-                    numberUnit="{/currencyCode}"
-                    numberState="{= ${products>UnitPrice} > ${/priceThreshold} ? 'Error' : 'Success' }">
-                    <attributes>
-                        <ObjectAttribute
-                            text="{products>QuantityPerUnit}"/>
-                        <ObjectAttribute
-                            title="{i18n>stockValue}" 
-                            text="{
-                                parts:[
-                                    'products>UnitPrice',
-                                    'products>UnitsInStock',
-                                    '/currencyCode'
-                                ],
-                                formatter:'.formatStockValue' 
-                            }"/>    
-                    </attributes>
-                
-                </ObjectListItem>
-         
-            </items>
+            items="{
+                path: 'products>/Products',
+                factory: '.productListFactory'
+            }">
+            <dependents>
+             <core:Fragment fragmentName="ui5.databinding.view.ProductSimple" type="XML"/>
+             <core:Fragment fragmentName="ui5.databinding.view.ProductExtended" type="XML"/>
+            </dependents>
+            
         </List>
     </Panel>
     <Panel 
