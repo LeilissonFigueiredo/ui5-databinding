@@ -12,6 +12,3 @@ npm-debug.log*
 .env.*
 ! .env.example
 default-env.json
-
-# Local UI5 Tooling workspace setup
-ui5.yaml
